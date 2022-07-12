@@ -5,13 +5,17 @@ namespace JoyTeam.Game
 {
     internal sealed class Manager : MonoBehaviour
     {
+        [SerializeField] private DataBase dataBase;
+
         private EcsWorld _world;
         private EcsSystems _systems;
 
-        private void Start() 
+        private void Start()
         {
             _world = new EcsWorld ();
-            _systems = new EcsSystems(_world);
+            _systems = new EcsSystems(_world, dataBase)
+                .Add(new SetEnvironmentSystem())
+                .Add(new SetOutputSystem());
             _systems.Init();
         }
 
