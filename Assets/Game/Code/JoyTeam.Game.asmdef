@@ -2,7 +2,9 @@
     "name": "JoyTeam.Game",
     "rootNamespace": "JoyTeam.Game",
     "references": [
-        "GUID:e59bf9fc7d5a44b18a819a92edd46163"
+        "GUID:e59bf9fc7d5a44b18a819a92edd46163",
+        "GUID:df380645f10b7bc4b97d4f5eb6303d95",
+        "GUID:ab67fb10353d84448ac887a7367cbda8"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
