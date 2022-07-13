@@ -2,7 +2,7 @@
 
 namespace JoyTeam.Game
 {
-    public struct DirectionLightViewRef
+    public struct DirectionLightRef
     {
         public Light Value;
     }

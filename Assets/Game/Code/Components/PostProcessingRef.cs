@@ -2,7 +2,7 @@
 
 namespace JoyTeam.Game
 {
-    public struct PostProcessingViewRef
+    public struct PostProcessingRef
     {
         public Volume Value;
     }

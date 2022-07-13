@@ -2,7 +2,7 @@
 
 namespace JoyTeam.Game
 {
-    public struct UIViewRef
+    public struct UserInterfaceRef
     {
         public Canvas Value;
     }

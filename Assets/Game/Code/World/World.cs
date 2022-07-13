@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace JoyTeam.Game
 {
-    internal sealed class Manager : MonoBehaviour
+    internal sealed class World : MonoBehaviour
     {
         [SerializeField] private DataBase dataBase;
 
@@ -12,6 +12,8 @@ namespace JoyTeam.Game
 
         private void Start()
         {
+            dataBase.Root = transform;
+            
             _world = new EcsWorld ();
             _systems = new EcsSystems(_world, dataBase);
             _systems

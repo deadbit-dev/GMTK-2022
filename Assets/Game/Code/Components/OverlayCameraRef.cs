@@ -2,7 +2,7 @@
 
 namespace JoyTeam.Game
 {
-    public struct WorldCameraViewRef
+    public struct OverlayCameraRef
     {
         public Camera Value;
     }

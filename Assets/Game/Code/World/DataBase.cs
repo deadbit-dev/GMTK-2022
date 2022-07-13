@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using PlasticPipe.PlasticProtocol.Client;
+using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.Rendering;
 
 namespace JoyTeam.Game
@@ -9,16 +11,18 @@ namespace JoyTeam.Game
         [Header("Environment")]
         [SerializeField] private Light directionLight;
         [SerializeField] private Volume postProcessing;
-        
+
         [Header("Output")]
         [SerializeField] private Camera worldCamera;
-        [SerializeField] private Camera uiCamera;
-        [SerializeField] private Canvas ui;
+        [SerializeField] private Camera overlayCamera;
+        [SerializeField] private Canvas userInterface;
+
+        public Transform Root { get; set; }
 
         public Light DirectionLight => directionLight;
         public Volume PostProcessing => postProcessing;
         public Camera WorldCamera => worldCamera;
-        public Camera UICamera => uiCamera;
-        public Canvas UI => ui;
+        public Camera OverlayCamera => overlayCamera;
+        public Canvas UserInterface => userInterface;
     }
 }
