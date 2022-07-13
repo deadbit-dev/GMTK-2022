@@ -11,20 +11,23 @@ namespace JoyTeam.Game
             
             var world = systems.GetWorld();
             
-            var directionLight = world.NewEntity();
-            var postProcessing = world.NewEntity();
+            var directionLightEntity = world.NewEntity();
+            var postProcessingEntity = world.NewEntity();
+            
+            var directionLight = Object.Instantiate(dataBase.DirectionLight, dataBase.Root);
+            var postProcessing = Object.Instantiate(dataBase.PostProcessing, dataBase.Root);
 
-            var directionLightView = Object.Instantiate(dataBase.DirectionLight);
-            var postProcessingView = Object.Instantiate(dataBase.PostProcessing);
+            directionLight.name = dataBase.DirectionLight.name;
+            postProcessing.name = dataBase.PostProcessing.name;
 
-            var directionLightViewRefPool = world.GetPool<DirectionLightViewRef>();
-            var postProcessingViewRefPool = world.GetPool<PostProcessingViewRef>();
+            var directionLightRefPool = world.GetPool<DirectionLightRef>();
+            var postProcessingRefPool = world.GetPool<PostProcessingRef>();
 
-            ref var directionLightViewRef = ref directionLightViewRefPool.Add(directionLight);
-            ref var postProcessingViewRef = ref postProcessingViewRefPool.Add(postProcessing);
+            ref var directionLightRef = ref directionLightRefPool.Add(directionLightEntity);
+            ref var postProcessingRef = ref postProcessingRefPool.Add(postProcessingEntity);
 
-            directionLightViewRef.Value = directionLightView;
-            postProcessingViewRef.Value = postProcessingView;
+            directionLightRef.Value = directionLight;
+            postProcessingRef.Value = postProcessing;
         }
     }
 }

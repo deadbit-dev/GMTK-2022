@@ -12,28 +12,31 @@ namespace JoyTeam.Game
             
             var world = systems.GetWorld();
             
-            var worldCamera = world.NewEntity();
-            var uiCamera = world.NewEntity();
-            var ui = world.NewEntity();
+            var worldCameraEntity = world.NewEntity();
+            var overlayCameraEntity = world.NewEntity();
+            var userInterfaceEntity = world.NewEntity();
 
-            var worldCameraView = Object.Instantiate(dataBase.WorldCamera);
-            var uiCameraView = Object.Instantiate(dataBase.UICamera);
-            var uiView = Object.Instantiate(dataBase.UI);
+            var worldCamera = Object.Instantiate(dataBase.WorldCamera, dataBase.Root);
+            var overlayCamera = Object.Instantiate(dataBase.OverlayCamera, dataBase.Root);
+            var userInterface = Object.Instantiate(dataBase.UserInterface, dataBase.Root);
 
-            worldCameraView.GetUniversalAdditionalCameraData().cameraStack.Add(uiCameraView);
-            uiView.worldCamera = uiCameraView;
+            worldCamera.name = dataBase.WorldCamera.name;
+            worldCamera.GetUniversalAdditionalCameraData().cameraStack.Add(overlayCamera);
+            overlayCamera.name = dataBase.OverlayCamera.name;
+            userInterface.name = dataBase.UserInterface.name;
+            userInterface.worldCamera = overlayCamera;
 
-            var worldCameraViewRefPool = world.GetPool<WorldCameraViewRef>();
-            var uiCameraViewRefPool = world.GetPool<UICameraViewRef>();
-            var uiViewRefPool = world.GetPool<UIViewRef>();
+            var worldCameraRefPool = world.GetPool<WorldCameraRef>();
+            var overlayCameraRefPool = world.GetPool<OverlayCameraRef>();
+            var userInterfaceRefPool = world.GetPool<UserInterfaceRef>();
 
-            ref var worldCameraViewRef = ref worldCameraViewRefPool.Add(worldCamera);
-            ref var uiCameraViewRef = ref uiCameraViewRefPool.Add(uiCamera);
-            ref var uiViewRef = ref uiViewRefPool.Add(ui);
+            ref var worldCameraRef = ref worldCameraRefPool.Add(worldCameraEntity);
+            ref var overlayCameraRef = ref overlayCameraRefPool.Add(overlayCameraEntity);
+            ref var userInterfaceRef = ref userInterfaceRefPool.Add(userInterfaceEntity);
 
-            worldCameraViewRef.Value = worldCameraView;
-            uiCameraViewRef.Value = uiCameraView;
-            uiViewRef.Value = uiView;
+            worldCameraRef.Value = worldCamera;
+            overlayCameraRef.Value = overlayCamera;
+            userInterfaceRef.Value = userInterface;
         }
     }
 }
