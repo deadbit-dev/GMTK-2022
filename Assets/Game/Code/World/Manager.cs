@@ -13,10 +13,14 @@ namespace JoyTeam.Game
         private void Start()
         {
             _world = new EcsWorld ();
-            _systems = new EcsSystems(_world, dataBase)
+            _systems = new EcsSystems(_world, dataBase);
+            _systems
                 .Add(new SetEnvironmentSystem())
-                .Add(new SetOutputSystem());
-            _systems.Init();
+                .Add(new SetOutputSystem())
+#if UNITY_EDITOR
+                .Add(new Leopotam.EcsLite.UnityEditor.EcsWorldDebugSystem())
+#endif
+                .Init();
         }
 
         private void Update()

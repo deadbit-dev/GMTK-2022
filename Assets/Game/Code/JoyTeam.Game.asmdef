@@ -3,6 +3,8 @@
     "rootNamespace": "JoyTeam.Game",
     "references": [
         "GUID:e59bf9fc7d5a44b18a819a92edd46163",
+        "GUID:206779980ac58453ea65e900299ccf71",
+        "GUID:a22362b82293644e1bbe51356c008d63",
         "GUID:df380645f10b7bc4b97d4f5eb6303d95",
         "GUID:15fc0a57446b3144c949da3e2b9737a9",
         "GUID:ab67fb10353d84448ac887a7367cbda8"
