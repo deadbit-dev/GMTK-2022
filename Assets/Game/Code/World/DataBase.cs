@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using UnityEngine.Rendering;
-using UnityEngine.Rendering.Universal;
 
 namespace JoyTeam.Game
 {
@@ -14,9 +13,12 @@ namespace JoyTeam.Game
         [Header("Output")]
         [SerializeField] private Camera worldCamera;
         [SerializeField] private Camera uiCamera;
-        [SerializeField] private Canvas canvas;
+        [SerializeField] private Canvas ui;
 
         public Light DirectionLight => directionLight;
         public Volume PostProcessing => postProcessing;
+        public Camera WorldCamera => worldCamera;
+        public Camera UICamera => uiCamera;
+        public Canvas UI => ui;
     }
 }
