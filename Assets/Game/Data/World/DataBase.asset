@@ -20,4 +20,4 @@ MonoBehaviour:
     type: 3}
   uiCamera: {fileID: 4227455835312540963, guid: c85de7f90e703644babb820314596ad4,
     type: 3}
-  canvas: {fileID: 8071952607112261846, guid: 49dfbec6595ab644c96e14c049244bb8, type: 3}
+  ui: {fileID: 8071952607112261846, guid: 49dfbec6595ab644c96e14c049244bb8, type: 3}
