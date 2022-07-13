@@ -16,8 +16,9 @@ MonoBehaviour:
     type: 3}
   postProcessing: {fileID: 6548210342928889838, guid: a821b49af9b7cb4459bfe458a7c40cbd,
     type: 3}
-  worldCamera: {fileID: 4795552530335141426, guid: d59d54a1a79cab14591cf2cc2ce77fce,
+  worldCamera: {fileID: 2398571224517497362, guid: 5d9c8e43c06adb748a14a1f797d1e702,
     type: 3}
-  uiCamera: {fileID: 4227455835312540963, guid: c85de7f90e703644babb820314596ad4,
+  overlayCamera: {fileID: 4227455835312540963, guid: c85de7f90e703644babb820314596ad4,
     type: 3}
-  ui: {fileID: 8071952607112261846, guid: 49dfbec6595ab644c96e14c049244bb8, type: 3}
+  userInterface: {fileID: 8071952607112261846, guid: 49dfbec6595ab644c96e14c049244bb8,
+    type: 3}
