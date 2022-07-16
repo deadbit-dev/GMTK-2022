@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Dijkstra
+namespace JoyTeam.Game
 {
     public class Edge
     {
@@ -18,7 +16,7 @@ namespace Dijkstra
             To = to;
         }
 
-        public bool IncedentVertex(Vertex vertex)
+        /*public bool IncedentVertex(Vertex vertex)
         {
             return vertex == From || vertex == To;
         }
@@ -28,6 +26,6 @@ namespace Dijkstra
             if(vertex == From) return To;
             else if(vertex == To) return From;
             else return null;
-        }
+        }*/
     }
 }

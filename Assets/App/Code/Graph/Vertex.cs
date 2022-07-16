@@ -1,28 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using UnityEngine;
 
-namespace Dijkstra
+namespace JoyTeam.Game
 {
+
     public class Vertex
     {
-        public int Number;
+        public int Index;
         public List<Edge> Edges = new List<Edge>();
 
-        public Vertex(int number)
+        public Vertex(int i)
         {
-            Number = number;
+            this.Index = i;
         }
+
         public void Connect(Vertex otherVertex)
         {
             var newEdge = new Edge(this,otherVertex);
             Edges.Add(newEdge);
-        }
-        public override string ToString()
-        {
-            return Number.ToString();
         }
     }
 }
