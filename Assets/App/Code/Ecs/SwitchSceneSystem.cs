@@ -14,11 +14,11 @@ namespace JoyTeam.Game
 
             var filter = world.Filter<SwitchSceneEvent>().End();
             var switchSceneEventPool = world.GetPool<SwitchSceneEvent>();
-            
+
             foreach (var entity in filter)
-            {
+            { 
                 world.GetPool<TransitionEvent>().Add(world.NewEntity()).Value = TransitionType.Hide;
-                //SceneManager.LoadScene(switchSceneEventPool.Get(entity).SceneIndex);
+                SceneManager.LoadScene(switchSceneEventPool.Get(entity).SceneIndex);
                 switchSceneEventPool.Del(entity);
             }
         }
