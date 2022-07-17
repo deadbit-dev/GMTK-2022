@@ -11,10 +11,7 @@ namespace JoyTeam.Game
         public int Index;
         public List<Edge> Edges = new List<Edge>();
 
-        public Vertex(int i)
-        {
-            this.Index = i;
-        }
+        public Vertex(int index) => this.Index = index;
 
         public void Connect(Vertex otherVertex)
         {

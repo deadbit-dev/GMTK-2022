@@ -15,17 +15,5 @@ namespace JoyTeam.Game
             From = from;
             To = to;
         }
-
-        /*public bool IncedentVertex(Vertex vertex)
-        {
-            return vertex == From || vertex == To;
-        }
-
-        public Vertex OtherVertex(Vertex vertex)
-        {
-            if(vertex == From) return To;
-            else if(vertex == To) return From;
-            else return null;
-        }*/
     }
 }

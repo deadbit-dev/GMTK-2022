@@ -18,13 +18,7 @@ namespace JoyTeam.Game
         }
         
         public void Connect(int v1,int v2) => vertices[v1].Connect(vertices[v2]);
-        
-        public Vertex this[int index]
-        {
-            get => vertices[index];
-            set => vertices[index] = value;
-        }
-
+        public Vertex this[int index] => vertices[index];
         public Edge this[int index , int index1] => vertices[index].Edges[index1];
     }
 }
